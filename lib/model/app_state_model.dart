@@ -23,4 +23,14 @@ class AppStateModel extends foundation.ChangeNotifier {
     _availableProducts = ProductRepository.loadProducts(Category.Cafe);
     notifyListeners();
   }
+
+  void addProductToCart(int productId){
+    if(!_productsInCart.containsKey(productId)){
+      print("click");
+      _productsInCart[productId] = 1;
+    } else {
+      //카트에 이미 있음
+    }
+    notifyListeners();
+  }
 }
