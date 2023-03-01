@@ -10,30 +10,31 @@ class ProductRepository {
         price: 100),
     Product(
         category: Category.Cafe,
-        id: 0,
+        id: 1,
         isFeatured: true,
         productName: "productName",
         price: 100),
     Product(
         category: Category.Cafe,
-        id: 0,
+        id: 2,
         isFeatured: true,
         productName: "productName",
         price: 100),
     Product(
         category: Category.Cafe,
-        id: 0,
+        id: 3,
         isFeatured: true,
         productName: "productName",
         price: 100),
     Product(
         category: Category.Cafe,
-        id: 0,
+        id: 4,
         isFeatured: true,
         productName: "productName",
-        price: 100),Product(
+        price: 100),
+    Product(
         category: Category.Cafe,
-        id: 0,
+        id: 5,
         isFeatured: true,
         productName: "productName",
         price: 100),

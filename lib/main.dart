@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:untitled2/product_row_item.dart';
+import 'package:untitled2/model/product_row_item.dart';
 
 
 import 'model/app_state_model.dart';
@@ -24,8 +24,13 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-
-    return const CupertinoApp(
+    //android appbar transparent
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent
+        )
+    );
+    return CupertinoApp(
       theme: CupertinoThemeData(brightness: Brightness.light),
       home: HomePage(),
     );

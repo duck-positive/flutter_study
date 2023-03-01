@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:provider/provider.dart';
+import 'package:untitled2/model/app_state_model.dart';
 
-import 'model/product.dart';
+import 'product.dart';
 
 class ProductRowItem extends StatelessWidget {
   const ProductRowItem({
@@ -27,8 +29,17 @@ class ProductRowItem extends StatelessWidget {
           ),
           leadingSize: 68,
           title: Text("dasd"),
-
-        )
+          trailing: CupertinoButton(
+            onPressed: () {
+              final model = Provider.of<AppStateModel>(context, listen: false);
+              model.addProductToCart(product.id);
+            },
+            child: const Icon(
+              CupertinoIcons.add,
+              semanticLabel: "add_cart",
+            ),
+          ),
+        ),
     );
   }
 }
